@@ -43,12 +43,15 @@ app.use(express.static('public'));
  */
 
 // App Secret can be retrieved from the App Dashboard
+const APP_SECRET = "8d1e51d10a7edc54e9fd79ffac1bdb0c "
 const APP_SECRET = process.env.APP_SECRET ;
 
 // Arbitrary value used to validate a webhook
+const VALIDATION_TOKEN = "my_voice_is_my_password_verify_me"
 const VALIDATION_TOKEN = process.env.VALIDATION_TOKEN;
 
 // Generate a page access token for your page from the App Dashboard
+const PAGE_ACCESS_TOKEN = "EAARhkzWNIF4BABghwdFj5ZB2Ss0mKyyUKeVjM426e1shiZADcsXZBtfj7Gh9DxrKqem2fQj25r5X9O8BIZCdlkD9zU7Ey459JeDyNFPoZAcFMwZAY69uuh9yDweowt6bcuZCRqSCMUiJf76sLW387MgUJhLbl5tEhWg2fwZAZA2cXZCQZDZD" 
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN)) {
